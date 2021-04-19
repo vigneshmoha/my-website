@@ -1,7 +1,7 @@
 {
-  "name": "webpack-static-html-starter",
+  "name": "my-website",
   "version": "1.0.0",
-  "description": "Webpack setup for static html development",
+  "description": "UI template of my personal website",
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --config webpack.dev.js --mode development",
