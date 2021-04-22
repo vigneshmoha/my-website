@@ -16,8 +16,9 @@ $fa-font-path: "~font-awesome/fonts";
 	--kbd-bg: #eee;
 	--code-color: rgba(212, 73, 80, 1);
 	--code-snippet-border: rgba(0, 0, 0, .05);
-	--blockquote-border: #e5e5e5
-    color-scheme: light dark;
+	--blockquote-border: #e5e5e5;
+  --border-color-dark: #000;
+  --border-color-light: rgb(180, 180, 180);
 }
 
 :root.dark {
@@ -33,6 +34,8 @@ $fa-font-path: "~font-awesome/fonts";
     --code-color: rgba(212, 73, 80, 0.85);
     --code-snippet-border: rgba(255, 255, 255, 0.1);
     --blockquote-border: rgba(255, 255, 255, 0.1);
+    --border-color-dark: #eee;
+    --border-color-light: rgb(180, 180, 180);
 }
 
 * {
@@ -60,6 +63,10 @@ a:hover {
     html {
         font-size: 21px;
     }
+}
+
+.ma-navbar {
+  border-top: 2px solid var(--border-color-dark);
 }
 
 .toggleSwitch span span {
@@ -232,3 +239,24 @@ a:hover {
   
   
   /*  End Toggle Switch  */
+
+  .articles-container {
+    margin-top: 30px;
+
+    h4 span {
+      font-weight: 300;      
+    }
+    .article-highlight {
+      margin-bottom: 20px;
+    }
+    .article-details {
+      margin: 0px;
+      font-size: 0.6em;
+    }
+  }
+
+  footer {
+    margin-top:40px;
+    font-size: 0.6em;
+    margin-bottom:10px;
+  }

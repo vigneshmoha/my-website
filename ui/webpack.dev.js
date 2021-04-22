@@ -1,5 +1,6 @@
 const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const path = require('path');
 
 module.exports = {
@@ -48,6 +49,13 @@ module.exports = {
                       loader: 'file-loader?name=assets/fonts/[name].[ext]'
                   }
               ]
+            },
+            {
+              test: /\.(png|jpe?g|gif)$/i,
+              loader: 'file-loader',
+              options: {
+                name: '[name].[ext]',
+              },
             }
         ]
     },
@@ -57,6 +65,11 @@ module.exports = {
             inject: true,
             chunks: ['index'],
             filename: 'index.html'
+        }),
+        new CopyWebpackPlugin({
+          patterns: [
+            { from: './src/images', to: 'assets/images' }
+          ]
         })
     ]
 };
