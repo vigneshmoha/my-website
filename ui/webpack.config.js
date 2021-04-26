@@ -10,6 +10,11 @@ module.exports = {
     devServer: {
         port: 8080
     },
+    output: {
+      filename: '[name].bundle.js',
+      path: path.resolve(__dirname, 'dist'),
+      clean: true,
+    },
     module:{
         rules: [
             {
@@ -68,7 +73,7 @@ module.exports = {
         }),
         new CopyWebpackPlugin({
           patterns: [
-            { from: './src/images', to: 'assets/images' }
+            { from: './src/assets/images', to: 'assets/images' }
           ]
         })
     ]

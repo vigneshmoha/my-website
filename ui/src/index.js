@@ -1,5 +1,5 @@
 import 'bootstrap';
-require('./scss/style.scss');
+require('./assets/scss/style.scss');
 
 const LOCAL_STORAGE_KEY_THEME = "theme-type";
 const LOCAL_META_DATA = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY_THEME));
